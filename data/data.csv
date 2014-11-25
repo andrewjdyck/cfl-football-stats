@@ -1,0 +1,81 @@
+Date,Week,AwayTeam,AwayPts,HomeTeam,HomePts,KickOffTime,Attendance,Winner
+Thu Jun 27,1, Montreal,38, Winnipeg,33,21:00:00,33500,Montreal
+Fri Jun 28,1, Hamilton,34, Toronto,39,19:00:00,29852,Toronto
+Fri Jun 28,1, BC,32, Calgary,44,22:00:00,26625,Calgary
+Sat Jun 29,1, Saskatchewan,39, Edmonton,18,15:30:00,35869,Saskatchewan
+Thu Jul 04,2, Winnipeg,19, Montreal,11,19:00:00,22134,Winnipeg
+Thu Jul 04,2, Toronto,16, BC,24,22:00:00,25255,BC
+Fri Jul 05,2, Calgary,21, Saskatchewan,36,21:00:00,35296,Saskatchewan
+Sun Jul 07,2, Edmonton,30, Hamilton,20,17:00:00,12612,Edmonton
+Thu Jul 11,3, Saskatchewan,39, Toronto,28,19:30:00,18211,Saskatchewan
+Fri Jul 12,3, Calgary,22, Montreal,14,19:30:00,23184,Calgary
+Sat Jul 13,3, Winnipeg,20, Hamilton,25,18:30:00,13085,Hamilton
+Sat Jul 13,3, BC,17, Edmonton,3,21:30:00,31310,BC
+Fri Jul 19,4, Toronto,35, Winnipeg,19,20:00:00,31257,Toronto
+Sat Jul 20,4, Montreal,27, Calgary,38,19:00:00,27378,Calgary
+Sat Jul 20,4, Edmonton,21, BC,31,22:00:00,26623,BC
+Sun Jul 21,4, Hamilton,0, Saskatchewan,37,19:00:00,37372,Saskatchewan
+Thu Jul 25,5, Edmonton,27, Montreal,32,19:30:00,23021,Montreal
+Fri Jul 26,5, Calgary,37, Winnipeg,24,20:00:00,31567,Calgary
+Sat Jul 27,5, Saskatchewan,32, Hamilton,20,19:30:00,13002,Saskatchewan
+Tue Jul 30,5, BC,12, Toronto,38,19:30:00,20064,Toronto
+Fri Aug 02,6, Hamilton,30, Edmonton,29,21:00:00,31006,Hamilton
+Mon Aug 05,6, Winnipeg,20, BC,27,19:00:00,26856,BC
+Thu Aug 08,7, Toronto,38, Montreal,13,19:30:00,22068,Toronto
+Fri Aug 09,7, Saskatchewan,27, Calgary,42,21:00:00,35637,Calgary
+Fri Aug 16,8, Hamilton,37, Winnipeg,18,20:00:00,32409,Hamilton
+Sat Aug 17,8, Montreal,21, Saskatchewan,24,16:00:00,40637,Saskatchewan
+Sat Aug 17,8, Calgary,22, BC,26,21:00:00,29201,BC
+Sun Aug 18,8, Edmonton,33, Toronto,36,19:00:00,19656,Toronto
+Thu Aug 22,9, BC,38, Montreal,39,19:30:00,22465,Montreal
+Fri Aug 23,9, Calgary,35, Toronto,14,19:30:00,21157,Calgary
+Sat Aug 24,9, Winnipeg,14, Hamilton,37,13:00:00,13138,Hamilton
+Sat Aug 24,9, Saskatchewan,30, Edmonton,27,16:00:00,41868,Saskatchewan
+Fri Aug 30,10, Hamilton,26, BC,29,22:00:00,30564,BC
+Sun Sep 01,10, Winnipeg,25, Saskatchewan,48,16:00:00,44910,Saskatchewan
+Mon Sep 02,10, Edmonton,34, Calgary,37,17:00:00,32217,Calgary
+Tue Sep 03,10, Montreal,20, Toronto,9,19:30:00,18863,Montreal
+Fri Sep 06,11, Calgary,22, Edmonton,12,21:00:00,33654,Calgary
+Sat Sep 07,11, BC,29, Hamilton,37,16:00:00,13101,Hamilton
+Sun Sep 08,11, Toronto,37, Montreal,30,13:00:00,23911,Toronto
+Sun Sep 08,11, Saskatchewan,13, Winnipeg,25,16:00:00,33500,Winnipeg
+Fri Sep 13,12, Hamilton,0, Calgary,0,21:00:00,,
+Sat Sep 14,12, Winnipeg,0, Edmonton,0,18:30:00,,
+Sat Sep 14,12, Toronto,0, Saskatchewan,0,21:30:00,,
+Sun Sep 15,12, Montreal,0, BC,0,16:30:00,,
+Fri Sep 20,13, Edmonton,0, Winnipeg,0,20:00:00,,
+Sat Sep 21,13, Montreal,0, Hamilton,0,16:00:00,,
+Sat Sep 21,13, Toronto,0, Calgary,0,19:30:00,,
+Sun Sep 22,13, BC,0, Saskatchewan,0,16:30:00,,
+Fri Sep 27,14, BC,0, Winnipeg,0,20:00:00,,
+Sat Sep 28,14, Calgary,0, Hamilton,0,18:00:00,,
+Sat Sep 28,14, Toronto,0, Edmonton,0,21:00:00,,
+Sun Sep 29,14, Saskatchewan,0, Montreal,0,13:00:00,,
+Fri Oct 04,15, Hamilton,0, Toronto,0,19:00:00,,
+Fri Oct 04,15, Saskatchewan,0, BC,0,22:00:00,,
+Sat Oct 05,15, Montreal,0, Edmonton,0,15:30:00,,
+Sat Oct 05,15, Winnipeg,0, Calgary,0,18:30:00,,
+Fri Oct 11,16, BC,0, Calgary,0,21:00:00,,
+Sat Oct 12,16, Edmonton,0, Saskatchewan,0,16:30:00,,
+Mon Oct 14,16, Winnipeg,0, Montreal,0,13:00:00,,
+Mon Oct 14,16, Toronto,0, Hamilton,0,16:30:00,,
+Fri Oct 18,17, Calgary,0, Edmonton,0,21:00:00,,
+Sat Oct 19,17, Toronto,0, Winnipeg,0,15:30:00,,
+Sat Oct 19,17, BC,0, Saskatchewan,0,19:00:00,,
+Sun Oct 20,17, Hamilton,0, Montreal,0,13:00:00,,
+Thu Oct 24,18, Winnipeg,0, Toronto,0,19:30:00,,
+Fri Oct 25,18, Edmonton,0, BC,0,22:00:00,,
+Sat Oct 26,18, Montreal,0, Hamilton,0,13:00:00,,
+Sat Oct 26,18, Saskatchewan,0, Calgary,0,19:00:00,,
+Fri Nov 01,19, Montreal,0, Toronto,0,19:00:00,,
+Fri Nov 01,19, Calgary,0, BC,0,22:00:00,,
+Sat Nov 02,19, Hamilton,0, Winnipeg,0,14:00:00,,
+Sat Nov 02,19, Edmonton,0, Saskatchewan,0,17:00:00,,
+Wed Jun 12, Pre-Season A, Toronto,24, Winnipeg,6,20:00:00,28642,
+Thu Jun 13, Pre-Season A, Hamilton,33, Montreal,26,19:00:00,20514,
+Fri Jun 14, Pre-Season A, Saskatchewan,31, Edmonton,24,21:00:00,26623,
+Fri Jun 14, Pre-Season A, BC,29, Calgary,27,21:00:00,26328,
+Thu Jun 20, Pre-Season B, Montreal,20, Toronto,24,19:00:00,6204,
+Thu Jun 20, Pre-Season B, Winnipeg,0, Hamilton,52,19:00:00,12732,
+Thu Jun 20, Pre-Season B, Calgary,24, Saskatchewan,23,22:00:00,32003,
+Fri Jun 21, Pre-Season B, Edmonton,27, BC,22,22:00:00,26733,
