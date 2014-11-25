@@ -1,27 +1,11 @@
 
 
+
 # CFL Pythagorean expectation
 
-# load libraries
-library("jsonlite")
-library("plyr")
-
-
-url <- "http://www.cflstats.ca/team/BC.json"
-url_base <- "http://www.cflstats.ca/team/"
-
-team <- "BC"
-teams <- c('BC', "SSK", "CGY", "EDM", "WPG", "HAM", 'TOR', 'MTL')
-
-teams_data <- list(1)
-for (i in 2:(length(teams)+1)) {
-  t <- i-1
-  team_url <- paste(url_base, teams[t], ".json", sep="")
-  team_json <- fromJSON(readLines(team_url, warn=FALSE))
-  team_stats <- team_json$Stats[, c("Team", "Year", "Wins", "Losses", "Ties", "PointsFor", "PointsAgainst")]
-  teams_data[[i]] <- team_stats  
-}
-season_data <- ldply(teams_data[2:length(teams_data)])
+# This CSV file is sourced from CFLStats.ca.
+# The CSV can be re-loaded from the API with the script get_aggregate_cfl_season_data.R
+season_data <- read.csv('./data/cfl_agg_season_data.csv', as.is=TRUE)
 
 # in baseball, sigma = std(runs scored)/average(runs scored)
 sd_pts <- sd(season_data$PointsFor)
