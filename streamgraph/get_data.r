@@ -1,22 +1,34 @@
 
 library('jsonlite')
-
+team <- 'TOR'
 get_team_season_points <- function(team) {
   url <- paste('http://www.cflstats.ca/team', team, '2014.json', sep='/')                                        
-  df <- fromJSON(readLines(url, warn=FALSE))$Games
-  home <- split(df[, c('WeekNumber', 'HomeTeam', 'HomeScore')], df$HomeTeam)[[team]]
-  away <- split(df[, c('WeekNumber', 'AwayTeam', 'AwayScore')], df$AwayTeam)[[team]]
-  names(home) <- c('WeekNumber', 'Team', 'Score')
-  names(away) <- c('WeekNumber', 'Team', 'Score')
-  out <- rbind(home, away)
-  return(out[order(out$WeekNumber),])
+  url_return <- fromJSON(readLines(url, warn=FALSE))$Games
+  home <- split(url_return[, c('WeekNumber', 'HomeScore')], url_return$HomeTeam)[[team]]
+  away <- split(url_return[, c('WeekNumber', 'AwayScore')], url_return$AwayTeam)[[team]]
+  names(home) <- c('WeekNumber', 'Score')
+  names(away) <- c('WeekNumber', 'Score')
+  temp <- rbind(home, away)
+  temp <- temp[temp$WeekNumber<=20,]
+  temp <- temp[order(temp$WeekNumber),]
+  weeks <- data.frame(WeekNumber=1:20)
+  weeks$v <- temp$WeekNumber[pmatch(weeks$WeekNumber, temp$WeekNumber)]
+  out <- merge(weeks, temp, all.x=TRUE)
+  out[is.na(out$Score), 'Score'] <- 0
+  out$v <- NULL
+  out$team <- team
+  return(out)
 }
 
 teams <- c('BC', "SSK", "CGY", "EDM", "WPG", "HAM", 'TOR', 'MTL', 'ORB')
-ll <- lapply(teams, get_team_season_points)
-df <- do.call('rbind', ll)
+df <- do.call('rbind', lapply(teams, get_team_season_points))
+names(df) <- c('date', 'value', 'key')
 
-names(df) <- c('date', 'key', 'value')
-write.csv(df, '~/Documents/cfl-football-stats/streamgraph/data.csv', row.names=FALSE)
+df$date <- as.character(df$date)
+df$date[nchar(df$date)<2] <- paste('0', df$date[nchar(df$date)<2], sep='')
+df$date <- as.Date(paste(df$date, '012014', sep=''), '%d%m%Y')
+df <- df[,c('key', 'value', 'date')]
+write.csv(test, '~/Documents/cfl-football-stats/streamgraph/data3.csv', 
+          row.names=FALSE,
+          quote=FALSE)
 
-as.Date(paste(cgy$WeekNumber, '01', '2014', sep=''), '%d%m%Y')

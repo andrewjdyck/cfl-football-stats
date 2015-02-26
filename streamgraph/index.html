@@ -41,7 +41,10 @@ button {
 <script>
 
 // chart("sample_data.csv", "orange");
-chart("data.csv", "orange");
+//chart("sample_data2.csv", "orange");
+// This calls the chart function defined below. 
+// It reads the data.csv and uses the blue colour scheme.
+chart("data.csv", "blue");
 
 var datearray = [];
 var colorrange = [];
@@ -60,12 +63,18 @@ else if (color == "orange") {
 }
 strokecolor = colorrange[0];
 
-var format = d3.time.format("%m/%d/%y");
+//var format = d3.time.format("%m/%d/%y");
+//var format = d3.time.format("%d-%m-%Y");
+// This is a format for dates on the x-axis
+var format = d3.time.format("%Y-%m-%d");
 
-var margin = {top: 20, right: 40, bottom: 30, left: 30};
+// Setup margins for the vis
+var margin = {top: 20, right: 40, bottom: 30, left: 40};
 var width = document.body.clientWidth - margin.left - margin.right;
 var height = 400 - margin.top - margin.bottom;
 
+// Setup the location for the tooltip.
+// This is where the team name and week's points will show up.
 var tooltip = d3.select("body")
     .append("div")
     .attr("class", "remove")
@@ -73,7 +82,7 @@ var tooltip = d3.select("body")
     .style("z-index", "20")
     .style("visibility", "hidden")
     .style("top", "30px")
-    .style("left", "55px");
+    .style("left", "65px");
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -84,19 +93,24 @@ var y = d3.scale.linear()
 var z = d3.scale.ordinal()
     .range(colorrange);
 
+// X axis definition
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
     .ticks(d3.time.weeks);
 
+// Y axis definition
 var yAxis = d3.svg.axis()
     .scale(y);
 
 var yAxisr = d3.svg.axis()
     .scale(y);
 
+// The stack layout is the streamgraph layout
 var stack = d3.layout.stack()
-    .offset("silhouette")
+//    .offset("zero") // baseline set to 0. A normal stacked area chart
+//    .offset("wiggle") // baseline set to wiggle. minimize the weighted change in slope
+    .offset("silhouette") // centered baseline.
     .values(function(d) { return d.values; })
     .x(function(d) { return d.date; })
     .y(function(d) { return d.value; });
@@ -127,6 +141,7 @@ var graph = d3.csv(csvpath, function(data) {
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.y0 + d.y; })]);
 
+// Adding the layers //
   svg.selectAll(".layer")
       .data(layers)
     .enter().append("path")
@@ -134,12 +149,13 @@ var graph = d3.csv(csvpath, function(data) {
       .attr("d", function(d) { return area(d.values); })
       .style("fill", function(d, i) { return z(i); });
 
-
+// Append x axis
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
+// Append y axis
   svg.append("g")
       .attr("class", "y axis")
       .attr("transform", "translate(" + width + ", 0)")
